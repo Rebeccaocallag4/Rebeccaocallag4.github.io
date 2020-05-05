@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>GirlPowerGenerator</title>
+   </head>
+
+   <body>
+       
+        <marquee direction="up" scrollamount="25"> <p style = "font-family:raleway,medium; color: black;background-color: floralwhite; font-size:131px;">
+         <b>GirlPower</blink></b>Generator
+         </p></marquee>
+   </body>
+
+</html>
+<html>
+    <body>
+   <body style="background-color:deeppink;">
+   </body>
+<html>
+<body>
+    <body>
+    <h1><p style = "font-family:raleway,medium; color: floralwhite; font-size:30px;">About </p></h1>
+			<p><p style = "font-family:raleway,medium; font-size:12px;">
+	
+		<div class="pages">
+
+		
+		<!--------	About	-------->
+		<p><p style = "font-family:raleway,medium;font-size:15px;"> <font size="+2">
+            <b>   GirlPower</b>Generator calculates <b>True Feminist Percentage.</b> You can now calculate the strength <br> of <b>Female Empowerment</b> you possess. Enter your first name into the 1st box below, <br> and your surname into the 2nd. Discover how <b> empowered </b> you are.</font></p>
+            
+
+                
+				<input type="text" name="cnameone" placeholder="First name" size="5" id="cnameone" autocomplete="off">
+				<input type="text" name="cnametwo" placeholder="Surname" size="5" id="cnametwo" autocomplete="off">
+				<input type="hidden" name="resulta" id="resulta">			
+				<input type="button" value="Calculate" class="calc first" onclick="calc();smoothScroll(document.getElementById('second'))">		
+			</div>
+			<?php if (empty ($small_ads_id)) { } else {?>
+				<ins 
+					class="adsbygoogle"
+					style="display:inline-block;min-width:100%;max-width:970px;width:100%;height:90px"
+					data-ad-client="<?php echo $small_ads_id ; ?>"
+					data-ad-slot="<?php echo $small_ads_slot ; ?>">
+				</ins>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>	 
+			<?php } ?>
+			<div id="second" class="guage-holder">    
+				<div class="circle-mask">
+					<div class="circle">
+						<div class="circle-inner"></div> 
+					</div>
+				</div>
+				<div class="percentage">0 %</div>
+				<div class="gauge-copy"></div>
+			</div>
+			<div id="coutput"></div>
+			<div class="pages">
+			<?php if (empty ($big_ads_id)) { } else {?>			
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins 
+					class="adsbygoogle" 
+					style="display:block" 
+					data-ad-client="<?php echo $big_ads_id ; ?>" 
+					data-ad-slot="<?php echo $big_ads_slot ; ?>" 
+					data-ad-format="auto" 
+					data-full-width-responsive="true">
+				</ins>
+				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>			
+			<?php } ?>		
+			</div>
+		</div>	
+	<?php require_once ('inc/footer.php')?>	
+	</form>			
+	<script>
+		function gObj(B){
+			var A;if(document.all){
+				if(typeof B=="string"){return document.all(B)}
+				else{ return B.style}
+					}
+			if(document.getElementById){
+				if(typeof B=="string"){return document.getElementById(B)}
+				else{return B.style}
+					}
+					return null
+				}
+			function showquickmsg(B,A){
+				if(A){B="<div class='error'>"+B+"</div>"}
+				gObj("coutput").innerHTML=B
+				}
+			function trimAll(A){
+				while(A.substring(0,1)==" "){A=A.substring(1,A.length)}
+				while(A.substring(A.length-1,A.length)==" "){A=A.substring(0,A.length-1)}
+					return A
+				}
+			function getNum(A){
+				outputNum=0;
+				for(i=0;i<A.length;i++){outputNum+=A.charCodeAt(i)}
+					return outputNum
+				}
+			function calc(){
+				showquickmsg("<input class='more' type='submit' value='Explanation'> ",true);
+				cnameone=trimAll(gObj("cnameone").value);
+				cnametwo=trimAll(gObj("cnametwo").value);
+			if(cnameone.length<1){showquickmsg,true;return }
+			else{
+				if(cnametwo.length<1){showquickmsg("<p>Please complete all required fields</p>",true);return }
+				}
+				cnameone=cnameone.toLowerCase();
+				cnametwo=cnametwo.toLowerCase();
+				totalNum=getNum(cnameone)*getNum(cnametwo);
+				finalScore=totalNum%100;
+		  var newVal = finalScore * 1.8 - 45;
+		  $('.circle-inner, .gauge-copy').css({
+			'transform' : 'rotate(' + newVal + 'deg)' 
+		  });
+		  $('.gauge-copy').css({
+			'transform' : 'translate(-50%, -50%) rotate(' + finalScore * 1.8 + 'deg)'
+		  });
+		  $('.percentage').text(finalScore + ' %');
+			document.getElementById("resulta").value = finalScore;
+		};
+		
+		window.smoothScroll = function(target) {
+			var scrollContainer = target;
+			do { 
+				scrollContainer = scrollContainer.parentNode;
+				if (!scrollContainer) return;
+				scrollContainer.scrollTop += 1;
+			} while (scrollContainer.scrollTop == 0);
+			var targetY = 0;
+			do { 
+				if (target == scrollContainer) break;
+				targetY += target.offsetTop;
+			} while (target = target.offsetParent);
+			scroll = function(c, a, b, i) {
+				i++; if (i > 30) return;
+				c.scrollTop = a + (b - a) / 30 * i;
+				setTimeout(function(){ scroll(c, a, b, i); }, 20);
+			}
+			scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+		}
+	</script>					
+</body>
+</html>
+<html>
+	<?php require_once ('inc/head.php')?>
+<body>
+	<?php if (empty ($small_ads_id)) { } else {?>
+				<ins 
+					class="adsbygoogle"
+					style="display:inline-block;min-width:100%;max-width:970px;width:100%;height:90px"
+					data-ad-client="<?php echo $small_ads_id ; ?>"
+					data-ad-slot="<?php echo $small_ads_slot ; ?>">
+				</ins>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>	 
+			<?php } ?> 
+    <h1><p style = "font-family:raleway,medium; color: floralwhite;background-color: black; font-size:30px;"> <marquee direction="up" scrollamount="8">Results! </h1></marquee></body>
+    
+    
+  
+    
+    <p><p style = "font-family:raleway,medium;font-size:20px;"> 
+    You scored 0 - 20% </font></p>
+    
+    <body>
+    <div><div style="float:right"> <img src="twirl.gif" /></div>
+    </body>
+    <br />
+
+  <br />
+   <body>
+    <h1><p style = "font-family:raleway,medium; color: floralwhite; font-size:30px;">FAQS </p></h1>
+			<p><p style = "font-family:raleway,medium; font-size:12px;">
+	
+			
+
+		
+		<!--------	FAQs	-------->
+    <p><p style = "font-family:raleway; font-size:20px">  1. I'm skeptical. How do you calculate empowerment? </b><br /></font> </p>
+<p style = "font-family:raleway,medium; color: floralwhite; font-size:20px"> 
+    Who knows? The generator will analyze your feminist purity.</p>
+				
+    <p style = "font-family:raleway,medium;font-size:20px"> 2. How can I make steps towards improving my level of feminine power?</font>
+    <br /><p style = "font-family:raleway,medium; color: floralwhite; font-size:20px"> Being able to sing the words to Beyonce’s ‘Lemonade’, is a great starting point.<br />  Once you've conquered this, 
+ </font></p>
+<p style = "font-family:raleway,medium;font-size:20px"> 3. How can I encourage other women to become empowered like me?</font>
+    <br /><p style = "font-family:raleway,medium; color: floralwhite; font-size:20px"> <b>
+    If you want your message of feminism to be heard above the media noise - be sexy.<br /> Selling yourself to sell your message is an effective strategy.<br /><br />
+    
+    <p style = "font-family:raleway,medium;font-size:20px">  4. How can I arm myself against the haters?</font>  <br /><p style = "font-family:raleway,medium; color: floralwhite; font-size:20px"><b>
+As long as you say you are empowered, anyone who complains is trying to oppress you.<br /> You have the license to judge others for judging you. <br />
+
+
+    <br /><p style = "font-family:raleway,medium;font-size:20px"> 5. I was under the impression that feminism was about people demanding that their humanity <br />  be recognized as valuable; confronting wage inequality, gendered divisions of labor, institutional <br />  racism and sexism, structural violence and bodily autonomy. Have I been misinformed?<br /></font>
+<p style = "font-family:raleway,medium; color: floralwhite; font-size:20px">  Feminism is supposed to be fun, you no longer have to be as serious as the women that came before.<br /> Don't be a hater - empowered women support each other! </p>
+		<!--------	END FAQ's	-------->
+		
+	<?php require_once ('inc/footer.php')?>	
+</body>
+</html>
+<html>
+	<?php require_once ('inc/head.php')?>
+<body>
+   
+		<!--------	END About	-------->
+		
+    <br />
+    <p><p style = "font-family:raleway,medium;font-size:15px;">
+    Share this site to inspire others!
+    <style type="text/css">
+ 
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+ 
+</style>
+    <div id="share-buttons">
+
+    
+    <!-- Email -->
+    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=Find%20out%20the%20level%20of%20of%20female%20empowerment%20you%20posess! https://simplesharebuttons.com">
+        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+    </a>
+ 
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+    </a>
+    
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+    </a>
+    
+
+    <!-- Print -->
+    <a href="javascript:;" onclick="window.print()">
+        <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+    </a>
+    
+    <!-- Reddit -->
+    <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+    </a>
+    
+
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+    </a>
+    
+</div>
+    
+	<div class="footer">
+		<p><p style = "font-family:raleway,medium;font-size:15px;">
+			<a target="_blank" href="https://rebeccaocallaghan.myportfolio.com/">Rebecca O'Callaghan</a> © 2020 
+			 
+
+<head>
+	<?php require_once ('config.php')?>
+	<meta charset="UTF-8">
+	<title><?php echo $site_name ;?></title>
+	<meta name="viewport"				content="width=device-width,initial-scale=1,maximum-scale=1">	
+	<meta name="description"			content="Love Calculator | Love Meter to Calculate Love Percentage" />
+	<meta property="og:url"				content="www.love.com" />
+	<meta property="og:type"			content="article" />
+	<meta property="og:title"			content="Love Calculator" />
+	<meta property="og:description"		content="Love Calculator | Love Meter to Calculate Love Percentage" />
+	<meta property="og:image"			content="assets/calculator.png" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >	
+	<link rel="icon" type="image/png" href="assets/love.png" />
+	<link rel="stylesheet" href="css/style.css"> 	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $analytics_tracking ;?>"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '<?php echo $analytics_tracking ;?>');
+	</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "<?php echo "$adsense_validation" ;?>",
+			enable_page_level_ads: true
+		});
+	</script>
+</head>
+<script>
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}
+</script>
+<?php 
+$site_name = "Love Calculator | Love Meter to Calculate Love Percentage"; 
+$site_url = "http://love.freevar.com";
+
+/***   google adsense validation ID    ***/
+$adsense_validation = "ca-pub-XXXXXXXXXXXXXXXX";
+
+
+/***   data ad client small   ***/
+$small_ads_id = "ca-pub-XXXXXXXXXXXXXXXX";
+$small_ads_slot = "XXXXXXXXXX";
+          
+
+/***   data ad client big    ***/
+$big_ads_id = "ca-pub-XXXXXXXXXXXXXXXX";
+$big_ads_slot = "XXXXXXXXXX";
+
+/***   google analytics ID    ***/
+$analytics_tracking = "UA-XXXXXXXXX-1";
+
+<html>
+<style>
+body {
+  font-size: 20px;
+}
+</style>
+<body>
+
+<span style='font-size:100px;'>&#128133;</span>
+
+
+</body>
+
+
+
+<body>
+  <div>float example</div>
+  <div><div style="float:right">Floating right content</div><div>Some content</div></div>
+</body>
+</html>         
+
